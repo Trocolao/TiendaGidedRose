@@ -1,0 +1,14 @@
+C:\Users\cmunozj\source\repos\GlidedRose\GlidedRose\bin\Debug\netcoreapp3.1\GlidedRose.exe
+C:\Users\cmunozj\source\repos\GlidedRose\GlidedRose\bin\Debug\netcoreapp3.1\GlidedRose.deps.json
+C:\Users\cmunozj\source\repos\GlidedRose\GlidedRose\bin\Debug\netcoreapp3.1\GlidedRose.runtimeconfig.json
+C:\Users\cmunozj\source\repos\GlidedRose\GlidedRose\bin\Debug\netcoreapp3.1\GlidedRose.runtimeconfig.dev.json
+C:\Users\cmunozj\source\repos\GlidedRose\GlidedRose\bin\Debug\netcoreapp3.1\GlidedRose.dll
+C:\Users\cmunozj\source\repos\GlidedRose\GlidedRose\bin\Debug\netcoreapp3.1\GlidedRose.pdb
+C:\Users\cmunozj\source\repos\GlidedRose\GlidedRose\obj\Debug\netcoreapp3.1\GlidedRose.csproj.AssemblyReference.cache
+C:\Users\cmunozj\source\repos\GlidedRose\GlidedRose\obj\Debug\netcoreapp3.1\GlidedRose.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cmunozj\source\repos\GlidedRose\GlidedRose\obj\Debug\netcoreapp3.1\GlidedRose.AssemblyInfoInputs.cache
+C:\Users\cmunozj\source\repos\GlidedRose\GlidedRose\obj\Debug\netcoreapp3.1\GlidedRose.AssemblyInfo.cs
+C:\Users\cmunozj\source\repos\GlidedRose\GlidedRose\obj\Debug\netcoreapp3.1\GlidedRose.csproj.CoreCompileInputs.cache
+C:\Users\cmunozj\source\repos\GlidedRose\GlidedRose\obj\Debug\netcoreapp3.1\GlidedRose.dll
+C:\Users\cmunozj\source\repos\GlidedRose\GlidedRose\obj\Debug\netcoreapp3.1\GlidedRose.pdb
+C:\Users\cmunozj\source\repos\GlidedRose\GlidedRose\obj\Debug\netcoreapp3.1\GlidedRose.genruntimeconfig.cache
