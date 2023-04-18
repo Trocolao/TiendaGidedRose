@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using System.Text;
 
 namespace GlidedRose
@@ -24,101 +25,102 @@ namespace GlidedRose
 
         public void UpdateQuality()
         {
-            int bajadaCalidad = 1;
+            int bajadaCalidad;
             for (var i = 0; i < Items.Count; i++)
             {
                 if (EsMagico(Items[i]))
                 {
                     bajadaCalidad = 2;
-                    DescensoDeLaCalidad(i, bajadaCalidad);
+                    DescensoDeLaCalidad(Items[i], bajadaCalidad);
                 }
                 else
                 {
-                    DescensoDeLaCalidad(i, bajadaCalidad);
+                    bajadaCalidad = 1;
+                    DescensoDeLaCalidad(Items[i], bajadaCalidad);
                 }
             }
         }
-        private void DescensoDeLaCalidad(int i, int bajadaCalidad)
+        private void DescensoDeLaCalidad(Item item, int bajadaCalidad)
         {
-            ActualizarCalidadConSellInPositivo(i, bajadaCalidad);
-            ActualizarSellIn(i);
-            ActualizarCalidadConSellInNegativo(i, bajadaCalidad);
+            ActualizarCalidadConSellInPositivo(item, bajadaCalidad);
+            ActualizarSellIn(item);
+            ActualizarCalidadConSellInNegativo(item, bajadaCalidad);
         }
 
-        private void ActualizarCalidadConSellInNegativo(int i, int bajadaCalidad)
+        private void ActualizarCalidadConSellInNegativo(Item item, int bajadaCalidad)
         {
-            if (Items[i].SellIn < 0)
+            if (item.SellIn < 0)
             {
-                if(Items[i].Name == "Aged Brie")
+                if(item.Name == "Aged Brie")
                 {
-                    if (Items[i].Quality < 50)
+                    if (item.Quality < 50)
                     {
-                        Items[i].Quality = Items[i].Quality + 1;
+                        item.Quality = item.Quality + 1;
                     }
                 }
-                else if (Items[i].Name == "Backstage passes to a TAFKAL80ETC concert")
+                else if (item.Name == "Backstage passes to a TAFKAL80ETC concert")
                 {
-                    Items[i].Quality = Items[i].Quality - Items[i].Quality;
+                    item.Quality = item.Quality - item.Quality;
                 }
                 else
                 {
-                    if (Items[i].Quality > 0)
+                    if (item.Quality > 0)
                     {
-                        if (Items[i].Name != "Sulfuras, Hand of Ragnaros")
+                        if (item.Name != "Sulfuras, Hand of Ragnaros")
                         {
-                            Items[i].Quality = Items[i].Quality - bajadaCalidad;
+                            item.Quality = item.Quality - bajadaCalidad;
                         }
                     }
                 }
             }
         }
 
-        private void ActualizarSellIn(int i)
+        private void ActualizarSellIn(Item item)
         {
-            if (Items[i].Name != "Sulfuras, Hand of Ragnaros")
+            if (item.Name != "Sulfuras, Hand of Ragnaros")
             {
-                Items[i].SellIn = Items[i].SellIn - 1;
+                item.SellIn = item.SellIn - 1;
             }
         }
 
-        private void ActualizarCalidadConSellInPositivo(int i, int bajadaCalidad)
+        private void ActualizarCalidadConSellInPositivo(Item item, int bajadaCalidad)
         {
-            if (Items[i].Name == "Aged Brie" || Items[i].Name == "Backstage passes to a TAFKAL80ETC concert")
+            if (item.Name == "Aged Brie" || item.Name == "Backstage passes to a TAFKAL80ETC concert")
             {
-                if (Items[i].Quality < 50)
+                if (item.Quality < 50)
                 {
-                    Items[i].Quality = Items[i].Quality + 1;
-                    ActualizarCalidadDeUnConciertoReciente(i);
+                    item.Quality = item.Quality + 1;
+                    ActualizarCalidadDeUnConciertoReciente(item);
                 }
             }
             else
             {
-                if (Items[i].Quality > 0)
+                if (item.Quality > 0)
                 {
-                    if (Items[i].Name != "Sulfuras, Hand of Ragnaros")
+                    if (item.Name != "Sulfuras, Hand of Ragnaros")
                     {
-                        Items[i].Quality = Items[i].Quality - bajadaCalidad;
+                        item.Quality = item.Quality - bajadaCalidad;
                     }
                 }
             }
         }
 
-        private void ActualizarCalidadDeUnConciertoReciente(int i)
+        private void ActualizarCalidadDeUnConciertoReciente(Item item)
         {
-            if (Items[i].Name == "Backstage passes to a TAFKAL80ETC concert")
+            if (item.Name == "Backstage passes to a TAFKAL80ETC concert")
             {
-                if (Items[i].SellIn < 11)
+                if (item.SellIn < 11)
                 {
-                    if (Items[i].Quality < 50)
+                    if (item.Quality < 50)
                     {
-                        Items[i].Quality = Items[i].Quality + 1;
+                        item.Quality = item.Quality + 1;
                     }
                 }
-                if (Items[i].SellIn < 6)
+                if (item.SellIn < 6)
                 {
-                    if (Items[i].Quality < 50)
+                    if (item.Quality < 50)
                     {
-                        Items[i].Quality = Items[i].Quality + 1;
+                        item.Quality = item.Quality + 1;
                     }
                 }
             }
