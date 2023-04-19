@@ -5,7 +5,7 @@ using System.Text;
 
 namespace GlidedRose
 {
-    internal class Tienda
+    public class Tienda
     {
         IList<Item> Items;
         public Tienda(IList<Item> Items)

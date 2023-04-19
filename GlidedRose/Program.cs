@@ -17,6 +17,7 @@ namespace GlidedRose
                 new Item {Name = "Sulfuras, Hand of Ragnaros", SellIn = -1, Quality = 80},
                  new Item {Name = "+5 Dexterity Vest conjured", SellIn = 10, Quality = 20},
                   new Item {Name = "+5 Dexterity Vest conjured", SellIn = 10, Quality = 20},
+               
                 new Item
                 {
                     Name = "Backstage passes to a TAFKAL80ETC concert",
